@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.104.2">
+  <title>Signin Template · Bootstrap v5.2</title>
+
+
+
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+  <!-- Custom styles for this template -->
+  <link href="css/signin.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+  <main class="form-signin w-100 m-auto shadow-lg p-3 mb-5">
+    <form id="formlogin" action="/login" method="POST">
+      <img class="mb-4" src="img/logo1.png" alt="" width="92" height="77">
+      <h1 class="h3 mb-3 fw-normal">Ingresar</h1>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="user" name="user" placeholder="usuario">
+        <label for="user">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
+        <label for="pass">Contraseña</label>
+      </div>
+
+      <div class="checkbox mb-3">
+
+      </div>
+      <button class="w-100 btn btn-lg btn-bd-primary" type="submit">Entrar</button>
+    </form>
+    <br>
+    <a href="/register" type="button" class="w-100 btn btn-lg btn-bd-primary">Registrarse</a>
+    <p class="mt-5 mb-3 text-muted">&copy; SinTapujos  2023 &copy;</p>
+  </main>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <% if(alert){ %>
+    <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text: '<%= alertMessage %>',
+        icon: '<%= alertIcon %>',
+        showConfirmButton: '<%= showConfirmButton %>',
+        timer: '<%= timer%>'
+      }).then(()=>{
+        window.location = '/<%= ruta %>'
+      })
+
+    </script>
+    
+
+  <%} %>
+
+ 
+</body>
+
+</html>
